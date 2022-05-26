@@ -28,7 +28,10 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "object-curly-spacing": ["error", "always"]
+    }
   },
   "browserslist": {
     "production": [

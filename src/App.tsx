@@ -11,7 +11,7 @@ const LISTINGS = gql`
 `;
 
 const App = () => {
-  const [limit, setLimit] = useState(2);
+  const [limit, setLimit ] = useState(2);
   const { loading, error, data, fetchMore } = useQuery(LISTINGS, {
     variables: { offset: 0, limit },
   })
@@ -19,10 +19,7 @@ const App = () => {
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error</p>
 
-  if (data) console.log(data)
-
   return (
-
     <div>
       { data.getAllListings.map((listing: any) => (
         <div key={listing.name}>
@@ -44,7 +41,6 @@ const App = () => {
         Load more...
       </button>
     </div>
-
   )
 }
 
